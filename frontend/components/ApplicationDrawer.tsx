@@ -143,22 +143,32 @@ export default function ApplicationDrawer({
                       : "Follow-Up Draft Ready"}
                   </span>
                 </div>
-                <button
-                  onClick={handleCopy}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-2xs transition"
-                >
-                  {copied ? (
-                    <>
-                      <Check className="w-4 h-4 text-emerald-600" />
-                      <span className="text-emerald-700 font-bold">Copied ✓</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-4 h-4 text-slate-500" />
-                      <span>Copy Email</span>
-                    </>
-                  )}
-                </button>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={`mailto:${encodeURIComponent(application.emails[application.emails.length - 1]?.from || "")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs transition"
+                    title="Open in your default email client"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Send Email</span>
+                  </a>
+                  <button
+                    onClick={handleCopy}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-2xs transition"
+                  >
+                    {copied ? (
+                      <>
+                        <Check className="w-4 h-4 text-emerald-600" />
+                        <span className="text-emerald-700 font-bold">Copied ✓</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-4 h-4 text-slate-500" />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
 
               <div className="space-y-2 text-sm">

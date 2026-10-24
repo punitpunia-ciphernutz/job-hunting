@@ -130,6 +130,15 @@ export default function FollowupQueue({
                         )}
                       </button>
 
+                      <a
+                        href={`mailto:${encodeURIComponent(app.emails[app.emails.length - 1]?.from || "")}?subject=${encodeURIComponent(app.followup_subject || `Follow-Up: Application for ${app.role} - Aarav Patel`)}&body=${encodeURIComponent(app.followup_body || "")}`}
+                        className="px-3.5 py-2 text-sm font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs transition flex items-center gap-1.5"
+                        title="Open in your default email client (Gmail, Outlook, Apple Mail)"
+                      >
+                        <Send className="w-4 h-4" />
+                        <span>Send Email</span>
+                      </a>
+
                       <button
                         onClick={(e) => handleCopy(app, e)}
                         className="px-4 py-2 text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-2xs transition flex items-center gap-1.5"
@@ -142,7 +151,7 @@ export default function FollowupQueue({
                         ) : (
                           <>
                             <Copy className="w-4 h-4" />
-                            <span>Copy Email</span>
+                            <span>Copy</span>
                           </>
                         )}
                       </button>

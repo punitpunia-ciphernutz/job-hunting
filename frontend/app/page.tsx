@@ -8,6 +8,7 @@ import ScamQuarantine from "../components/ScamQuarantine";
 import ApplicationDrawer from "../components/ApplicationDrawer";
 import SettingsModal from "../components/SettingsModal";
 import { SAMPLE_EMAILS } from "../data/sampleEmails";
+import { SAMPLE_INBOX_RESPONSE } from "../data/sampleResponse";
 import {
   ProcessInboxResponse,
   ConsolidatedApplication,
@@ -139,11 +140,27 @@ export default function Home() {
         setInboxData(data);
         setCurrentEmails(SAMPLE_EMAILS);
       } catch (err: any) {
-        console.error(err);
-        showToast(
-          "Backend Unreachable",
-          "Ensure FastAPI is running on http://localhost:8000"
-        );
+        console.warn("FastAPI backend offline, loading resilient client fallback:", err);
+        // Dynamic follow-up math in client fallback
+        const parsedRef = new Date(refDate);
+        const dynamicApps = SAMPLE_INBOX_RESPONSE.consolidated_applications.map((app) => {
+          const appDate = new Date(app.latest_date);
+          const diffDays = Math.max(0, Math.floor((parsedRef.getTime() - appDate.getTime()) / (1000 * 60 * 60 * 24)));
+          const isOverdue = app.current_status === "applied" && diffDays >= 7;
+          return {
+            ...app,
+            days_since_last_email: diffDays,
+            followup_due: isOverdue,
+          };
+        });
+        const dueCount = dynamicApps.filter((a) => a.followup_due).length;
+        setInboxData({
+          ...SAMPLE_INBOX_RESPONSE,
+          reference_date: refDate,
+          consolidated_applications: dynamicApps,
+          followups_due_count: dueCount,
+        });
+        setCurrentEmails(SAMPLE_EMAILS);
       } finally {
         setIsProcessing(false);
       }
