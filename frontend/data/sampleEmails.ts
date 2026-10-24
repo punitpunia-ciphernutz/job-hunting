@@ -1,0 +1,144 @@
+import { RawEmailInput } from "../types";
+
+export const SAMPLE_EMAILS: RawEmailInput[] = [
+  {
+    id: 1,
+    date: "2026-10-10",
+    from: "careers@zentech.in",
+    subject: "Application received: Backend Engineer",
+    body: "Thanks for applying for the Backend Engineer role at Zentech. Our team is reviewing applications and we will get back to you soon."
+  },
+  {
+    id: 2,
+    date: "2026-10-14",
+    from: "hr.infosys.jobs@gmail.com",
+    subject: "Offer letter - pay Rs 4,999 training fee",
+    body: "You are selected for Software Engineer. Pay the refundable Rs 4,999 training fee today and send Aadhaar and PAN copies to confirm your joining."
+  },
+  {
+    id: 3,
+    date: "2026-10-18",
+    from: "talent@finly.co",
+    subject: "Interview invite: Round 1 on 27 Oct",
+    body: "Hi Aarav, We loved your Python backend profile. Please pick a slot for a 45-minute technical call on 27 Oct."
+  },
+  {
+    id: 4,
+    date: "2026-10-08",
+    from: "talent@finly.co",
+    subject: "Application received: Senior Python Engineer",
+    body: "Thank you for applying to Finly! Your application for Senior Python Engineer has been logged."
+  },
+  {
+    id: 5,
+    date: "2026-10-11",
+    from: "jobs@cloudscale.io",
+    subject: "Application submitted: Platform Engineer",
+    body: "Hi Aarav, Confirming receipt of your application for Platform Engineer at CloudScale. Due to high volume, please allow us time to review."
+  },
+  {
+    id: 6,
+    date: "2026-10-12",
+    from: "hiring@paystackindia.com",
+    subject: "Thanks for applying to Paystack India - API Engineer",
+    body: "Hello Aarav, Your application for API Engineer has been received by Paystack India. Our recruiters are reviewing candidates."
+  },
+  {
+    id: 7,
+    date: "2026-10-15",
+    from: "careers@novadata.ai",
+    subject: "Application Confirmation: AI Backend Engineer",
+    body: "Hi Aarav, Thank you for applying to NovaData AI for the AI Backend Engineer role in Ahmedabad."
+  },
+  {
+    id: 8,
+    date: "2026-10-21",
+    from: "careers@kinetixlabs.dev",
+    subject: "Application received: Distributed Systems Engineer",
+    body: "Hi Aarav, We received your application for Distributed Systems Engineer at Kinetix Labs. You will hear from us shortly."
+  },
+  {
+    id: 9,
+    date: "2026-10-06",
+    from: "recruiting@vervepay.in",
+    subject: "Application received: Backend Developer",
+    body: "Thanks for applying to VervePay! Our engineering team will evaluate your background soon."
+  },
+  {
+    id: 10,
+    date: "2026-10-16",
+    from: "recruiting@vervepay.in",
+    subject: "Update on your VervePay Backend Developer application",
+    body: "Hi Aarav, Thank you for applying to VervePay. Unfortunately, we have decided to move forward with other candidates whose experience aligns closer with our current payment stack."
+  },
+  {
+    id: 11,
+    date: "2026-10-13",
+    from: "no-reply@stacksphere.com",
+    subject: "Your application for Software Engineer II at StackSphere",
+    body: "Dear Aarav, After careful consideration, we regret to inform you that we will not be proceeding with your candidacy for Software Engineer II."
+  },
+  {
+    id: 12,
+    date: "2026-10-19",
+    from: "people@hyperlooptech.in",
+    subject: "Status of your application - Backend Lead",
+    body: "Hi Aarav, Unfortunately, the Backend Lead position at HyperloopTech has been closed and we are unable to move forward with your application."
+  },
+  {
+    id: 13,
+    date: "2026-10-05",
+    from: "careers@devpulse.io",
+    subject: "Application Received - Backend Software Engineer",
+    body: "Hi Aarav, Thanks for applying to DevPulse! We are excited to review your profile."
+  },
+  {
+    id: 14,
+    date: "2026-10-14",
+    from: "careers@devpulse.io",
+    subject: "Interview Invitation: System Design Round - DevPulse",
+    body: "Hi Aarav, Congratulations on clearing screening! Please share your availability for a 60-minute System Design interview at DevPulse."
+  },
+  {
+    id: 15,
+    date: "2026-10-22",
+    from: "careers@devpulse.io",
+    subject: "Official Employment Offer: Backend Software Engineer at DevPulse",
+    body: "Dear Aarav, The team loved speaking with you! We are thrilled to extend an official offer for Backend Software Engineer at DevPulse (22 LPA base). Let us connect Monday to walk through benefits and joining formalities."
+  },
+  {
+    id: 16,
+    date: "2026-10-20",
+    from: "founders@aethercloud.in",
+    subject: "Technical Interview Invite: Founding Backend Engineer",
+    body: "Hey Aarav, Impressed by your backend and automation projects. Let us schedule a 30-minute technical round on Oct 26 at 4 PM IST."
+  },
+  {
+    id: 17,
+    date: "2026-10-23",
+    from: "hr@quantagrid.co.in",
+    subject: "Offer of Employment - Python Backend Specialist",
+    body: "Hi Aarav, Following your final CTO round, we are delighted to offer you the Python Backend Specialist role at QuantaGrid (Ahmedabad Hybrid). No fees or sensitive IDs required now—our official HR portal link will follow after offer acceptance."
+  },
+  {
+    id: 18,
+    date: "2026-10-17",
+    from: "tcs.direct.joining2026@yahoo.com",
+    subject: "URGENT: Direct Joining Letter - No Interview Required!",
+    body: "Hello candidate, Sir ur profile is direct shortlisted in TCS backdoor drive! Package 14 LPA fixed. Bas Rs 2,500 laptop security deposit abhi pay karo on WhatsApp HR number and send PAN card + Aadhaar scan for instant offer letter before 6 PM."
+  },
+  {
+    id: 19,
+    date: "2026-10-21",
+    from: "recruitment.accenture.india.desk@outlook.com",
+    subject: "Selected! Background Verification Fee Rs 3,200 Pending",
+    body: "Dear Applicant, Your CV is approved by Accenture Hiring Board without technical interview. Kindly transfer Rs 3,200 refundable BGV document verification charge and share bank passbook + Aadhaar copy today."
+  },
+  {
+    id: 20,
+    date: "2026-10-22",
+    from: "global-hr-onboarding@fast-hire-portal99.xyz",
+    subject: "Remote USD $65/hr Python Role - Complete Paid Certification",
+    body: "Congrats! You are hired immediately for Remote Python Developer. Before contract signing, purchase mandatory $49 onboarding compliance voucher from our link and upload passport/ID proof."
+  }
+];

@@ -1,0 +1,32 @@
+# Python
+backend/.venv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Node & Next.js
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables
+.env
+*.env
+!.env.example
+
+# OS & Shortcuts
+.DS_Store
+Thumbs.db
+*.lnk
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
