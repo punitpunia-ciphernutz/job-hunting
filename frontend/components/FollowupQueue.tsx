@@ -131,7 +131,7 @@ export default function FollowupQueue({
                       </button>
 
                       <a
-                        href={`mailto:${encodeURIComponent(app.emails[app.emails.length - 1]?.from || "")}?subject=${encodeURIComponent(app.followup_subject || `Follow-Up: Application for ${app.role} - Aarav Patel`)}&body=${encodeURIComponent(app.followup_body || "")}`}
+                        href={`mailto:${encodeURIComponent(app.timeline[app.timeline.length - 1]?.sender || "")}?subject=${encodeURIComponent(app.followup_subject || `Follow-Up: Application for ${app.role} - Aarav Patel`)}&body=${encodeURIComponent(app.followup_body || "")}`}
                         className="px-3.5 py-2 text-sm font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs transition flex items-center gap-1.5"
                         title="Open in your default email client (Gmail, Outlook, Apple Mail)"
                       >

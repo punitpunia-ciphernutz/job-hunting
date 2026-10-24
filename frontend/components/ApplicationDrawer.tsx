@@ -145,7 +145,7 @@ export default function ApplicationDrawer({
                 </div>
                 <div className="flex items-center gap-2">
                   <a
-                    href={`mailto:${encodeURIComponent(application.emails[application.emails.length - 1]?.from || "")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                    href={`mailto:${encodeURIComponent(application.timeline[application.timeline.length - 1]?.sender || "")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs transition"
                     title="Open in your default email client"
                   >
